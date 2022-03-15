@@ -2,7 +2,7 @@ import { Card, ListGroup } from 'react-bootstrap'
 import Score from "./Score";
 const Student = (props) => {
   return ( 
-    <Card style={{ width: '40rem' }}>
+    <Card className="theCard"style={{ width: '25rem' }}>
       <Card.Body>
         <Card.Header as="h3">
           Name: {props.student.name}
