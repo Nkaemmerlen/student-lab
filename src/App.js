@@ -61,9 +61,9 @@ function App() {
     ]
   }]
   return (
-    <div>
+    <>
       <StudentList students={students} />
-    </div>
+    </>
   );
 }
 

@@ -1,18 +1,22 @@
-
+import { Card, ListGroup } from 'react-bootstrap'
 import Score from "./Score";
 const Student = (props) => {
   return ( 
-    <>
-      <h2>
-        Name: {props.student.name}
-      </h2>
-      <h3>
-        Bio: {props.student.bio}
-      </h3>
-      {props.student.scores.map(card =>
-        <Score key={card} card={card} />
-      )}
-    </>
+    <Card style={{ width: '40rem' }}>
+      <Card.Body>
+        <Card.Header as="h3">
+          Name: {props.student.name}
+        </Card.Header>
+        <Card.Text>
+          Bio: {props.student.bio}
+        </Card.Text>
+        <ListGroup.Item variant="flush">
+          {props.student.scores.map(card =>
+            <Score key={card} card={card} />
+          )}
+        </ListGroup.Item>
+      </Card.Body>
+    </Card>
   );
 }
 export default Student
